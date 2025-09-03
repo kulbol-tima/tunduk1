@@ -121,7 +121,7 @@ export default function Home() {
       <section
         className="relative py-20 px-6"
         style={{
-          backgroundImage: `url('https://readdy.ai/api/search-image?query=Beautiful%20mountainous%20landscape%20of%20Kyrgyzstan%20with%20traditional%20yurt%20settlements%2C%20snow-capped%20Tien%20Shan%20mountains%20in%20background%2C%20green%20valleys%20with%20flowing%20rivers%2C%20clear%20blue%20sky%2C%20peaceful%20rural%20family%20scene%20with%20children%20playing%2C%20warm%20golden%20lighting%2C%20photorealistic%20style%2C%20government%20official%20backdrop%20feel%2C%20patriotic%20atmosphere&width=1400&height=600&seq=kyrgyz-hero-1&orientation=landscape')`,
+          backgroundImage: `url('/images/hero-background.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
