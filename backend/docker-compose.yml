@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  postgres-db:
+    image: postgres:15-alpine
+    container_name: postgres-db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=ubk_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - ubk-net
+
+  redis-cache:
+    image: redis:7-alpine
+    container_name: redis-cache
+    ports:
+      - "6379:6379"
+    networks:
+      - ubk-net
+
+  backend-app:
+    build: .
+    container_name: backend-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres-db
+      - redis-cache
+    environment:
+      - DB_HOST=postgres-db
+      - DB_PORT=5432
+      - DB_NAME=ubk_db
+      - DB_USER=postgres
+      - DB_PASSWORD=password
+      - REDIS_HOST=redis-cache
+      - REDIS_PORT=6379
+    networks:
+      - ubk-net
+
+volumes:
+  postgres_data:
+
+networks:
+  ubk-net:
+    driver: bridge
