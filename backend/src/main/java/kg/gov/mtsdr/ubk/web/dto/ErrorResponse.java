@@ -1,4 +1,4 @@
-package kg.gov.mtsdr.ubk.integration.tunduk.dto;
+package kg.gov.mtsdr.ubk.web.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

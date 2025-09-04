@@ -1,4 +1,11 @@
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: "http://changeme-auth-server/realms/your-realm/protocol/openid-connect/certs" # changeme
+
+spring:
   application:
     name: ubk-backend
   # --- DATASOURCE CONFIGURATION ---
@@ -34,3 +41,17 @@ logging:
   level:
     org.springframework.web: INFO
     kg.gov.mtsdr.ubk: DEBUG
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+  default-produces-media-type: application/json
+  api-docs.enabled: true
+  swagger-ui.enabled: true
+  show-actuator: true
+  info:
+    title: UBK Social Benefits API
+    version: v0.0.1
+    description: API for the "Үй-бүлөгө көмөк" social benefits system.
