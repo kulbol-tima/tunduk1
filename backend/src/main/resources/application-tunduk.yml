@@ -1,0 +1,161 @@
+# This file should be activated by using the 'tunduk' Spring profile.
+# It contains placeholder configuration for the Tunduk X-Road integration.
+# IMPORTANT: All 'changeme' values must be replaced with actual production values.
+
+tunduk:
+  xroad:
+    security-server-url: "http://changeme-x-road-security-server/cgi-bin/consumer_proxy"
+
+  security:
+    keystore:
+      path: "classpath:certs/keystore.p12" # changeme - path to the keystore file
+      password: "changeme"
+      alias: "changeme"
+    truststore:
+      path: "classpath:certs/truststore.p12" # changeme - path to the truststore file
+      password: "changeme"
+
+  services:
+    # 1. Данные МСЭК (MSEC data)
+    msek:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
+
+    # 2. Данные из ГРС: Паспортная база (GRS: Passport data)
+    grs-passport:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
+
+    # 3. Данные из ГРС: ЗАГС база (GRS: Civil Registry data)
+    grs-zags:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
+
+    # 4. Данные из ГРС: Адрес фактического проживания (GRS: Actual address)
+    grs-address:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
+
+    # 5. Данные из ГРС: Сведения о транспортном средстве (GRS: Vehicle data)
+    grs-vehicle:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
+
+    # 6. Данные из ИСРТ: Статус занятости (ISRT: Employment status)
+    isrt-employment:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
+
+    # 7. Данные из СФ: Наличие пенсии (SF: Pension status)
+    sf-pension:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
+
+    # 8. Данные из СФ: Информация о периодах работы (SF: Work periods)
+    sf-work-history:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
+
+    # 9. Ветеринария: Информация о КРС и МРС (Veterinary: Cattle info)
+    vet-cattle:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
+
+    # 10. Данные из ГНС: Информация о наличии патента (GNS: Patent info)
+    gns-patent:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
+
+    # 11. Данные из ГНС: ИП (GNS: Individual Entrepreneur)
+    gns-ie:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
+
+    # 12. Данные Кадастра: Наличие недвижимости (Cadastre: Property info)
+    cadastre-property:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
+
+    # 13. Данные с ГКДО: ВОВ (GKDO: WWII Veterans)
+    gkdo-wwii:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
+
+    # 14. Данные с ГКДО: ЧАЭС (GKDO: Chernobyl)
+    gkdo-chernobyl:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
+
+    # 15. Данные с ГКДО: Афганцы (GKDO: Afghan veterans)
+    gkdo-afghan:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
+
+    # 16. Данные из КИССП: Список доступных услуг (KISSP: List of services)
+    kissp-services:
+      xroadInstance: "central-server" # changeme
+      memberClass: "GOV" # changeme
+      memberCode: "changeme"
+      subsystemCode: "changeme"
+      serviceCode: "changeme"
+      serviceVersion: "v1"
